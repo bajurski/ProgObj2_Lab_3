@@ -62,13 +62,16 @@ public class MyFrame {
         pane.add(table);
         pane.setPreferredSize(new Dimension(300,178));
 
-        dialog.setBounds(x,y, 300, 210);
-        dialog.add(pane);
-        dialog.pack();
-        dialog.setLocationRelativeTo(frame);
-        //frame.add(dialog);
-        dialog.setVisible(true);
-        frame.setVisible(true);
+        frame.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
 
+                dialog.setBounds(e.getX(),e.getY(), 300, 210);
+                dialog.add(pane);
+                dialog.pack();
+                dialog.setVisible(true);
+            }
+        });
+        frame.setVisible(true);
     }
 }
