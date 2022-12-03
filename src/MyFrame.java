@@ -5,7 +5,7 @@ import javax.swing.table.TableColumnModel;
 
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
-public class MyFrame implements MouseListener{
+public class MyFrame {
     int x = 0;
     int y = 0;
     final int[][] tab;
@@ -66,8 +66,8 @@ public class MyFrame implements MouseListener{
         dialog.add(pane);
         dialog.pack();
         dialog.setLocationRelativeTo(frame);
-        frame.add(dialog);
-       // dialog.setVisible(true);
+        //frame.add(dialog);
+        dialog.setVisible(true);
         frame.setVisible(true);
 
     }
